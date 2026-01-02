@@ -1,38 +1,55 @@
-# ARGON-V: Adversarial-Resistant Ground-truth Observation
+# ARGON-V  
+**Adversarial-Resistant Ground-truth ObservatioN - Verification**
 
-[![Status](https://img.shields.io/badge/status-pre--birth-red.svg?style=flat-round)]()
-[![Protocol](https://img.shields.io/badge/protocol-v0.1--draft-orange.svg?style=flat-round)]()
-[![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg?style=flat-round)](https://github.com/ieldante/argon-v/blob/main/LICENSE)
+## Status
+**Protocol Design Draft (v0.1)**
 
-ARGON-V is a systems protocol for establishing high-confidence web observations in adversarial environments. Unlike traditional verification methods that assume a trusted execution environment, ARGON-V assumes an untrusted client and a non-cooperative platform.
+ARGON-V is a systems protocol for establishing high-confidence web observations in adversarial environments. Unlike traditional verification methods that assume a trusted execution environment or platform cooperation, ARGON-V explicitly assumes an untrusted client and a non-cooperative platform.
+
+At this stage, the repository documents the protocol design, threat model, security rationale, and system architecture. A working reference implementation exists but is not yet open-sourced while the specification and invariant model are finalized.
+
+---
 
 ## The Economic Model of Trust
 
-The protocol does not attempt to provide a mathematical guarantee of absolute truth, which is formally impossible in an unmanaged client environment. Instead, it enforces **Economic Cost Asymmetry**.
+ARGON-V does not attempt to provide a mathematical guarantee of absolute truth, which is formally impossible in an unmanaged client environment. Instead, it enforces **economic cost asymmetry**.
 
-By requiring simultaneous, multi-surface semantic consistency—tied to ephemeral server-issued challenges—the protocol raises the complexity and labor cost of a successful forgery beyond the expected utility of the exploit. ARGON-V transforms a "data manipulation" problem into a "coherent narrative forgery" problem, which is significantly harder to automate and sustain.
+By requiring simultaneous multi-surface semantic consistency—tied to ephemeral, server-issued challenges—the protocol raises the complexity and labor cost of a successful forgery beyond the expected utility of the exploit. In effect, ARGON-V transforms a *data manipulation* problem into a *coherent narrative forgery* problem, which is significantly harder to automate and sustain.
+
+---
 
 ## Core System Invariants
 
-The ARGON-V pipeline maintains three primary safety properties:
+The ARGON-V pipeline enforces three primary safety properties:
 
-1. **Temporal Freshness**: Observations are cryptographically bound to an ephemeral, high-entropy Nonce ($N$) to prevent session replay and pre-computed state injection.
-2. **Semantic Coherence**: The system extracts facts from $M$ independent surfaces. Verification requires that all $M$ observations maintain logical consistency (e.g., a dashboard total must equal the sum of its ledger entries).
-3. **Deterministic Canonicalization**: Raw DOM artifacts are mapped into a strictly typed schema via a server-authoritative engine, neutralizing client-side heuristic manipulation.
+- **Temporal Freshness**  
+  Observations are cryptographically bound to an ephemeral, high-entropy nonce to prevent replay and pre-computed state injection.
+
+- **Semantic Coherence**  
+  Facts are extracted from multiple independent observation surfaces. Verification requires that all surfaces maintain logical consistency (e.g., a dashboard total must equal the sum of its ledger entries).
+
+- **Deterministic Canonicalization**  
+  Raw DOM artifacts are mapped into a strictly typed, server-authoritative schema, neutralizing client-side heuristic manipulation and UI noise.
+
+---
 
 ## Repository Structure
 
-* `packages/core`: Formal logic for invariant checking and pipeline state transitions.
-* `packages/providers`: Interface definitions for site-specific semantic extraction.
-* `packages/extension`: The reference observation agent for the browser.
-* `apps/server`: The authoritative verification and Merkle-commitment engine.
-* `docs/theory`: Systems analysis on the probability of coherent forgery.
+- `packages/core` — Formal logic for invariant checking and pipeline state transitions  
+- `packages/providers` — Interfaces for site-specific semantic extraction  
+- `packages/extension` — Reference browser-based observation agent  
+- `apps/server` — Authoritative verification and Merkle-commitment engine  
+- `docs/theory` — Systems analysis and economic-security reasoning
+
+---
 
 ## Operational Status
 
-**Current Phase: Pre-Birth / Specification Drafting.**
+**Current phase:** Specification and threat-surface finalization.
 
-This repository serves as a structural blueprint. Development is currently focused on the formalization of the Version 0.1 Specification. Implementation work will follow once the invariant model and threat surface are frozen.
+This repository serves as a structural and conceptual blueprint. Development is currently focused on freezing the v0.1 protocol specification and invariant model. Public implementation will follow once the security surface is sufficiently stabilized.
+
+---
 
 ## License
 
